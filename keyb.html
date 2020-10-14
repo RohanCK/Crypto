@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+	<title>Capstone Project</title>
+	<link rel="stylesheet" href="Style.css"/>
+	<script>
+	function validateForm() {
+	  var x = document.forms["vform"]["passw"].value;
+	  if (x == "") {
+		alert("Field must not be left blank");
+		return false;
+	  }
+	  else{
+	  document.write("The value Entered is : "+ x);
+	  }
+	}
+	
+	function myFunction(event) {
+		var x = event;
+
+		var treshold = 20000000000;
+
+		var c = {
+			0: [], // input encoded
+			1: [], // key encoded
+			2: [], // cipher encoded
+			3: []  // decoding performed
+		};
+
+		for (i=0;i<=x.length;++i) 
+			c[0].push((x[i]+"").charCodeAt(0));
+		
+
+		// c[0] is the plain text
+
+		// generate random key
+
+		for (i=0;i<=c[0].length;++i) 
+			c[1].push(Math.round(Math.random()*treshold));
+		alert("Generated Initial Pad: \n" + c[1].join(", "));
+
+		// generating cipher text
+
+		for (i=0;i<=c[0].length;++i) 
+			c[2].push(c[0][i] ^ c[1][i]);
+		
+		alert("Resulting Cipher : \n" + c[2].join(", "));
+
+		// Recalculating Pad 
+		for (i=0;i<=c[0].length - 1;++i) 
+			c[3].push(c[2][i] ^ c[1][i]);  
+		
+		alert("Has decoding been successful? \n" + ( c[0].join() == c[3].join() ? "Yes" : "No" ));
+	
+	}
+	</script>
+	
+</head>
+<body>
+		
+
+		<div class="cable">
+		</div>
+		<div class="keyboard">
+				<div class="logo">
+				CAPSTONE REVIEW
+				</div>
+  
+				
+  
+				<form method="post" name="vform" onsubmit="return validateForm()">
+					<div class="section-a">
+					  
+					  
+					  <div class="pass">
+					  <input type="password" name="passw" id="ps1" onkeydown="myFunction(event)">
+					  
+					  </div>
+
+					  <div class="key backspace">
+					  <input type="submit" value="SUBMIT" />
+					  </div>
+    
+					  <div class="key letter">
+					  <input type="button" name="q" value="Q">
+					  </div>
+				      
+					  <div class="key letter">
+					  <input type="button" name="w" value="W">
+					  </div>
+					  
+					  <div class="key letter">
+						<input type="button" name="e" value="E">
+					  </div>
+					  
+					  <div class="key letter">
+						<input type="button" name="r" value="R">
+					  </div>
+					  
+					  <div class="key letter">
+					  <input type="button" name="t" value="T">
+						
+					  </div>
+					  
+					  <div class="key letter">
+					  <input type="button" name="y" value="Y">
+					
+					  </div>
+					  
+					  <div class="key letter">
+					  <input type="button" name="u" value="U">
+						
+					  </div>
+					  
+					  <div class="key letter">
+						<input type="button" name="i" value="I">
+						
+					  </div>
+					  
+					  <div class="key letter">
+					  <input type="button" name="o" value="O">
+						
+					  </div>
+					  
+					  <div class="key letter">
+					  <input type="button" name="p" value="P">	
+					
+					  </div>
+    
+					  <div class="key letter">
+					  <input type="button" name="a" value="A">	
+						
+					  </div>
+					  
+					  <div class="key letter">
+					  <input type="button" name="s" value="S">	
+						
+					  </div>
+						
+					  <div class="key letter">
+					  <input type="button" name="d" value="D">	
+						
+					  </div>
+						
+					  <div class="key letter">
+					  <input type="button" name="f" value="F">
+						
+					  </div>
+						
+					  <div class="key letter">
+					  <input type="button" name="g" value="G">	
+						
+					  </div>
+						
+					  <div class="key letter">
+					  <input type="button" name="h" value="H">	
+						
+					  </div>
+						
+					  <div class="key letter">
+					  <input type="button" name="j" value="J">	
+						
+					  </div>
+						
+					  <div class="key letter">
+					  <input type="button" name="k" value="K">	
+			
+					  </div>
+					
+					  <div class="key letter">
+					  <input type="button" name="l" value="L">	
+						
+					  </div>
+   
+					  <div class="key letter">
+					  <input type="button" name="z" value="Z">	
+						
+					  </div>
+					  
+					  <div class="key letter">
+					  <input type="button" name="x" value="X">	
+						
+					  </div>
+						
+					  <div class="key letter">
+					  <input type="button" name="c" value="C">	
+						
+					  </div>
+						
+					  <div class="key letter">
+					  <input type="button" name="v" value="V">	
+						
+					  </div>
+					  
+					  <div class="key letter">
+					  <input type="button" name="b" value="B">	
+						
+					  </div>
+					  
+					  <div class="key letter">
+					  <input type="button" name="n" value="N">	
+						
+					  </div>
+					  
+					  <div class="key letter">
+					  <input type="button" name="m" value="M">	
+						
+					  </div>
+    
+    
+					</div><!-- end section-a-->
+					<div class="section-b">
+    
+					  <div class="key num dual">
+					  <input type="button" name="one" value="1">
+						
+					  </div>
+					  
+					  <div class="key num dual">
+					  <input type="button" name="two" value="2">	
+					
+					  </div>
+
+					  <div class="key num dual">
+					  <input type="button" name="three" value="3">
+					    
+					  </div>
+					  
+					  <div class="key num dual">
+					  <input type="button" name="four" value="4">	
+						
+					  </div>
+					  
+					  <div class="key num dual">
+					  <input type="button" name="five" value="5">
+						
+					  </div>
+
+					  <div class="key num dual">
+					  <input type="button" name="six" value="6">	
+						
+					  </div>
+
+					  <div class="key num dual">
+					  <input type="button" name="seven" value="7">
+					  
+					  </div>
+					  
+					  <div class="key num dual">
+				      <input type="button" name="eight" value="8">
+						
+					  </div>
+
+					  <div class="key num dual">
+					  <input type="button" name="nine" value="9">
+						
+					  </div>
+
+					  <div class="key num dual">
+					  <input type="button" name="zero" value="0">
+						
+					  </div>										   
+					<!--END NUMBER KEYS -->
+
+    
+					</div><!-- end section-b-->
+</form>
+</div>
+				
+</body>
+</html>
