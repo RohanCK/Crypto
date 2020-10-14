@@ -1,6 +1,2 @@
-# New_repository
-Introduction to the open source repositories on github.
-Hey, this is Rohan this side and i am here to explore Github and its 
-repositories.I have a knack for game-dev and also am very keen about 
-web-develpoment.Thanks for reading about me! 
-Kudos
+# Prevention of Shoulder Surfing Attcaks using Cryptographic Techniques
+Αuthentication is a process that works to verify legitimacy and can be performed in several different ways like token, biometrics, and textual and graphical passwords. The primary motivation for graphical passwords is usability. However, the significant potential drawback of this approach is shoulder surfing and camera-based attacks. In computer security, shoulder surfing is a type of social engineering technique used to obtain information such as personal identification numbers (PINs),.passwords and other confidential data by looking over the victim's shoulder. This attack can be performed either at close range by directly looking over.the.victim's shoulder or from a more extended scale, for example, by using a pair of binoculars or similar hardware. Crowded places are the more likely areas for an attacker to shoulder surf the victim. Gaze-based password entry is ubiquitous these days. The. necessary procedure for gaze-based password entry is similar to regular password entry, except that in place of typing a key or touching the screen, the user. looks at each desired character or trigger region in sequence, same.as eye.typing. So in this project, we have attempted to prevent these.drawbacks, using a secure encryption method like making use of Vernam Cipher.
